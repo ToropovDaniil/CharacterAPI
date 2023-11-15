@@ -7,6 +7,6 @@
 
 import UIKit
 
-final class CharacterCell: UICollectionViewCell {
+final class CharacterActionCell: UICollectionViewCell {
     @IBOutlet weak var characterLabel: UILabel!
 }

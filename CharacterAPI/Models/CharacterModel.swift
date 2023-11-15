@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct CharacterModel: Decodable {
+    let results: [Character]
+}
+
 struct Character: Decodable {
     let id: Int
     let name: String
@@ -17,7 +21,17 @@ struct Character: Decodable {
     let origin: Origin
     let location: Location
     let image: String
-    let episode: [String]
+    let episode: [Episode]
+    let url: String
+    let created: String
+}
+
+struct Episode: Decodable {
+    let id: Int
+    let name: String
+    let air_date: String
+    let episode: String
+    let characters: [Character]
     let url: String
     let created: String
 }

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6AC23932B01214B002CC0C3 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AC23922B01214B002CC0C3 /* CharacterCell.swift */; };
+		B6AC23932B01214B002CC0C3 /* CharacterActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AC23922B01214B002CC0C3 /* CharacterActionCell.swift */; };
+		B6AC239B2B040CC9002CC0C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AC239A2B040CC9002CC0C3 /* NetworkManager.swift */; };
+		B6AC239F2B041E7D002CC0C3 /* CharactersListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AC239E2B041E7D002CC0C3 /* CharactersListViewContoller.swift */; };
+		B6AC23A12B042021002CC0C3 /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AC23A02B042021002CC0C3 /* CharacterViewCell.swift */; };
 		B6D4B86C2B0108C5006D0BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4B86B2B0108C5006D0BA7 /* AppDelegate.swift */; };
 		B6D4B86E2B0108C5006D0BA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4B86D2B0108C5006D0BA7 /* SceneDelegate.swift */; };
 		B6D4B8702B0108C5006D0BA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D4B86F2B0108C5006D0BA7 /* MainViewController.swift */; };
@@ -18,7 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B6AC23922B01214B002CC0C3 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		B6AC23922B01214B002CC0C3 /* CharacterActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterActionCell.swift; sourceTree = "<group>"; };
+		B6AC239A2B040CC9002CC0C3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B6AC239E2B041E7D002CC0C3 /* CharactersListViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewContoller.swift; sourceTree = "<group>"; };
+		B6AC23A02B042021002CC0C3 /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
 		B6D4B8682B0108C5006D0BA7 /* CharacterAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharacterAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D4B86B2B0108C5006D0BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6D4B86D2B0108C5006D0BA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +60,8 @@
 		B6AC23952B016E70002CC0C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B6AC23922B01214B002CC0C3 /* CharacterCell.swift */,
+				B6AC23922B01214B002CC0C3 /* CharacterActionCell.swift */,
+				B6AC23A02B042021002CC0C3 /* CharacterViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -71,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D4B86F2B0108C5006D0BA7 /* MainViewController.swift */,
+				B6AC239E2B041E7D002CC0C3 /* CharactersListViewContoller.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 		B6D4B85F2B0108C4006D0BA7 = {
 			isa = PBXGroup;
 			children = (
+				B6AC239A2B040CC9002CC0C3 /* NetworkManager.swift */,
 				B6D4B86A2B0108C5006D0BA7 /* CharacterAPI */,
 				B6D4B8692B0108C5006D0BA7 /* Products */,
 			);
@@ -192,11 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6AC239B2B040CC9002CC0C3 /* NetworkManager.swift in Sources */,
 				B6D4B8702B0108C5006D0BA7 /* MainViewController.swift in Sources */,
+				B6AC23A12B042021002CC0C3 /* CharacterViewCell.swift in Sources */,
 				B6D4B86C2B0108C5006D0BA7 /* AppDelegate.swift in Sources */,
 				B6D4B86E2B0108C5006D0BA7 /* SceneDelegate.swift in Sources */,
-				B6AC23932B01214B002CC0C3 /* CharacterCell.swift in Sources */,
+				B6AC23932B01214B002CC0C3 /* CharacterActionCell.swift in Sources */,
 				B6D4B8802B0108E9006D0BA7 /* CharacterModel.swift in Sources */,
+				B6AC239F2B041E7D002CC0C3 /* CharactersListViewContoller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpotifyAPI/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = CharacterAPI/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -374,7 +386,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpotifyAPI/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = CharacterAPI/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
