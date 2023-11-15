@@ -47,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6190A092B058D8300FDCC9D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B6AC239A2B040CC9002CC0C3 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		B6AC23942B016E4C002CC0C3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +111,6 @@
 		B6D4B85F2B0108C4006D0BA7 = {
 			isa = PBXGroup;
 			children = (
-				B6AC239A2B040CC9002CC0C3 /* NetworkManager.swift */,
 				B6D4B86A2B0108C5006D0BA7 /* CharacterAPI */,
 				B6D4B8692B0108C5006D0BA7 /* Products */,
 			);
@@ -120,6 +127,7 @@
 		B6D4B86A2B0108C5006D0BA7 /* CharacterAPI */ = {
 			isa = PBXGroup;
 			children = (
+				B6190A092B058D8300FDCC9D /* Network */,
 				B6AC23992B016EAC002CC0C3 /* Resourses */,
 				B6AC23982B016E9A002CC0C3 /* Storyboards */,
 				B6AC23972B016E8F002CC0C3 /* ViewContollers */,

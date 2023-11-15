@@ -32,7 +32,9 @@ final class NetworkManager {
     static let shared = NetworkManager()
     
     func fetch<T: Decodable>(dataType: T.Type, url: String, completion: @escaping(T) -> Void) {
+        
         guard let url = URL(string: url) else { return }
+        
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 return print(error?.localizedDescription ?? "No error description")
@@ -49,11 +51,15 @@ final class NetworkManager {
     }
     
     func fetchImageCharacters(url: String, completion: @escaping(Data) -> Void) {
+        
         guard let url = URL(string: url) else { return }
-        guard let imageData = try? Data(contentsOf: url) else { return }
-        completion(imageData)
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: url) else { return }
+            DispatchQueue.main.async {
+                completion(imageData)
+            }
+        }
     }
-    
     private init() {
     }
 }

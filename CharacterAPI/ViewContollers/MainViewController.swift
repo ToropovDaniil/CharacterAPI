@@ -5,10 +5,7 @@
 //  Created by Торопов Даниил  on 12.11.2023.
 //
 
-
 import UIKit
-
-
 
 final class MainViewController: UICollectionViewController {
     
@@ -34,11 +31,7 @@ extension MainViewController {
 }
 
 // MARK: UICollectionViewDelegate
-extension MainViewController {
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let characterAction = characterActions[indexPath.item]
-  }
-  
+extension MainViewController {  
     func collectionView(_ collectionView: UICollectionView,
                                  layout collectionViewLayout: UICollectionViewLayout,
                                  sizeForItemAt indexPath: IndexPath) -> CGSize {
