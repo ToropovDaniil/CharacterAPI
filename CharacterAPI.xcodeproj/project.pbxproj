@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6190A0C2B0A9AA400FDCC9D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B6190A0B2B0A9AA400FDCC9D /* Alamofire */; };
 		B6AC23932B01214B002CC0C3 /* CharacterActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AC23922B01214B002CC0C3 /* CharacterActionCell.swift */; };
 		B6AC239B2B040CC9002CC0C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AC239A2B040CC9002CC0C3 /* NetworkManager.swift */; };
 		B6AC239F2B041E7D002CC0C3 /* CharactersListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AC239E2B041E7D002CC0C3 /* CharactersListViewContoller.swift */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6190A0C2B0A9AA400FDCC9D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +156,9 @@
 			dependencies = (
 			);
 			name = CharacterAPI;
+			packageProductDependencies = (
+				B6190A0B2B0A9AA400FDCC9D /* Alamofire */,
+			);
 			productName = SpotifyAPI;
 			productReference = B6D4B8682B0108C5006D0BA7 /* CharacterAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +187,9 @@
 				Base,
 			);
 			mainGroup = B6D4B85F2B0108C4006D0BA7;
+			packageReferences = (
+				B6190A0A2B0A9AA400FDCC9D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B6D4B8692B0108C5006D0BA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -438,6 +446,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6190A0A2B0A9AA400FDCC9D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6190A0B2B0A9AA400FDCC9D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6190A0A2B0A9AA400FDCC9D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6D4B8602B0108C4006D0BA7 /* Project object */;
 }

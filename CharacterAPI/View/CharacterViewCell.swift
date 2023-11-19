@@ -20,20 +20,19 @@ final class CharacterViewCell: UITableViewCell {
         labelName.text = character.name
         labelSpecies.text = character.species
         labelLocation.text = character.location.name
+        //        labelEpisode.text = character.episode
         
-        NetworkManager.shared.fetch(dataType: Character.self, url: character.url) { character in
-            NetworkManager.shared.fetchImageCharacters(url: character.image) { imageData in
-                self.imageCharacter.image = UIImage(data: imageData)
+        
+        NetworkManager.shared.fetchImageCharacters(url: character.image) { result in
+            switch result {
+            case .success(let imageData):
+                DispatchQueue.main.async {
+                    self.imageCharacter.image = UIImage(data: imageData)
+                }
+            case .failure(let error):
+                print(error)
             }
         }
-        
-//Мои наработки:
-        
-//        NetworkManager.shared.fetch(dataType: Episode.self, url:  "https://rickandmortyapi.com/api/episode/9") { episode in
-//            self.labelEpisode.text = episode.name
-//        }
     }
 }
-        
-//        if let firstEpisode = character.episode.first {
-//            labelEpisode.text = firstEpisode.name
+

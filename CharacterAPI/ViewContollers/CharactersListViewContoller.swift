@@ -12,21 +12,26 @@ final class CharactersListViewContoller: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetch()
+        fetchCharactersData()
     }
     
-    private func fetch() {
-        NetworkManager.shared.fetch(dataType: CharacterModel.self, url: List.url.rawValue) { characterModel in
-            self.characters = characterModel.results
-            self.tableView.reloadData()
+    private func fetchCharactersData() {
+        NetworkManager.shared.fetchCharactersData(dataType: CharacterModel.self, url: List.url.rawValue) { result in
+            switch result {
+            case .success(let characterModel):
+                self.characters = characterModel.results
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }
+    
     // MARK: - Table view data source
 extension CharactersListViewContoller {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         characters.count
     }
     
